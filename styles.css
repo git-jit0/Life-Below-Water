@@ -1,7 +1,6 @@
-*{
-      margin: 0px;
-      border: 0px;
-      padding: 0px;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+html{
+      scroll-behavior: smooth;
 }
 body{
       color: whitesmoke;
@@ -17,21 +16,28 @@ body::-webkit-scrollbar
 .toggle_theme{
       position: fixed;
       z-index: 1;
-      bottom: 30px;
-      left: 10px;
+      bottom: 20px;
+      left: 12px;
 }
 .toggle_theme .box{
       width: 50px;
-      height: 20px;
+      height: 25px;
       background-color: white;
       border-radius: 50px;
+      margin: auto;
 }
 .toggle_theme .circle{
       width: 20px;
       height: 20px;
       border-radius: 50px;
-      background-color: white;
+      background-color: rgb(0, 0, 0);
       border: 1px solid black;
+      position: absolute;
+      top: .12rem;
+      left: 1.2rem;
+}
+.toggle_theme #text{
+      margin-top: 10px;
 }
 .side_navbar{
       display: flex;
@@ -52,19 +58,50 @@ body::-webkit-scrollbar
       text-decoration: none;
       color: white;
       margin: 30px;
-      scroll-behavior: smooth;
 }
 .sea{
       margin-left: 7rem;
-      display: felx;
+      display: flex;
       flex-direction: column;
+      scroll-behavior: smooth;
 }
 .sea .page{
       height: 100vh;
 }
-.sea img{
+img{
+      border: 5px solid rgb(255, 255, 255);
       object-fit: cover;
-      aspect-ratio: 16/9;
-
-
+}
+p{
+      padding-top: 30px;
+}
+.content{
+      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      font-family: 'Quicksand', sans-serif;
+      max-width: 40ch;
+}
+#page-1 > img{
+      position: absolute;
+      right: 157px;
+      top: 160px;
+      aspect-ratio: 9/16;
+      height: 30rem;   
+}
+#page-1 > .content{
+      position: absolute;
+      top:165px;
+      left: 270px;
+}
+#page-2 > img{
+      position: absolute;
+      right: calc(157px);
+      top: calc(100vh+160px);
+      aspect-ratio: 9/16;
+      height: 30rem;   
+}
+#page-2 > .content{
+      position: absolute;
+      top:calc(100vh+165px);
+      left: 270px;
 }
