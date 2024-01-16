@@ -66,11 +66,9 @@ body::-webkit-scrollbar
       left: 0;
       background: linear-gradient(rgb(0,129,170),black);
       height: 100vh;
-      width: 7rem;
+      width: 8rem;
 }
 .side_navbar a{
-      transform: rotate(-90deg); 
-      transform-origin: center center; 
       text-decoration: none;
       color: white;
       margin: 30px;
@@ -102,13 +100,13 @@ body::-webkit-scrollbar
 #page-1 > img{
       position: absolute;
       right: 157px;
-      top:120vh;
+      top:220vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-1 > .content{
       position: absolute;
-      top:120vh;
+      top:220vh;
       left: 270px;
 }
 
@@ -116,51 +114,51 @@ body::-webkit-scrollbar
 #page-2 > img{
       position: absolute;
       right: 157px;
-      top:220vh;
+      top:320vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-2 > .content{
       position: absolute;
-      top:220vh;
+      top:320vh;
       left: 270px;
 }
 
 #page-3 > img{
       position: absolute;
       right: 157px;
-      top:320vh;
+      top:420vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-3 > .content{
       position: absolute;
-      top:320vh;
+      top:420vh;
       left: 270px;
 }
 
 #page-4 > img{
       position: absolute;
       right: 157px;
-      top:420vh;
+      top:520vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-4 > .content{
       position: absolute;
-      top:420vh;
+      top:520vh;
       left: 270px;
 }
 
 #page-5 > img{
       position: absolute;
       right: 157px;
-      top:520vh;
+      top:620vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-5 > .content{
       position: absolute;
-      top:520vh;
+      top:620vh;
       left: 270px;
 }
