@@ -19,17 +19,15 @@
   </div>
   
 
-  <div class="side_navbar" onclick="toggleSidebar()">
-    <span class="material-icons" id="menu">menu</span> 
+  <span class="material-icons" id="menu" onclick="toggleNavbar()" > menu </span> 
+
+  <div class="side_navbar" id="side-bar">
     <a href="#page-1">Target 1</a>
     <a href="#page-2">Target 2</a>
     <a href="#page-3">Target 3</a>
     <a href="#page-4">Target 4</a>
     <a href="#page-5">Target 5</a>
-
-    
       <img src="sun.png" id="toggle_theme" alt="light_mode_png">
-
   </div>
 
   <div class="sea">
@@ -87,6 +85,16 @@
       else
       {
         icon.src="sun.png";
+      }
+    }
+
+    function toggleNavbar() 
+    {
+      var sidebar = document.getElementById("side-bar");
+      if (sidebar.style.left === "-8rem") {
+          sidebar.style.left = "0";
+      } else {
+          sidebar.style.left = "-8rem";
       }
     }
   </script>

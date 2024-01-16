@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+*{
+      margin: 0;
+      border: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
 html{
       scroll-behavior: smooth;
 }
@@ -6,14 +12,7 @@ body{
       color: whitesmoke;
       background: var(--bg-color);
       background-blend-mode: screen;
-      -ms-overflow-style: none;
-      scrollbar-width: none; 
 }
-body::-webkit-scrollbar 
-{
-      display: none;
-}
-
 :root{
       --bg-color: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
       --navbar-color: linear-gradient(rgb(0,129,170),black);
@@ -41,7 +40,7 @@ body::-webkit-scrollbar
       font-size: 3.5rem;
 }
 #toggle_theme{
-      position: fixed;
+      position: absolute;
       z-index: 1;
       bottom: 20px;
       left: 2.7rem;
@@ -56,18 +55,26 @@ body::-webkit-scrollbar
       gap: 2rem;
       position: fixed;
       top: 0;
-      left: 0;
+      left: -8rem;
       background:var(--navbar-color);
       height: 100vh;
       width: 8rem;
+      transition: left 0.3s ease;
 }
 .side_navbar a{
       text-decoration: none;
       color: var(--text-color);
-      margin: 30px;
+      margin-top: 70px;
+}
+.side_navbar a:hover{
+      transform: scale(1.2);
 }
 #menu{
-      margin-top: 20px;
+      position: fixed;
+      z-index: 1;
+      top: 20px;
+      left: 3rem;
+      cursor: pointer;
 }
 .sea{
       margin-left: 7rem;
