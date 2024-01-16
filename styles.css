@@ -4,7 +4,7 @@ html{
 }
 body{
       color: whitesmoke;
-      background: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
+      background: var(--bg-color);
       background-blend-mode: screen;
       -ms-overflow-style: none;
       scrollbar-width: none; 
@@ -12,6 +12,17 @@ body{
 body::-webkit-scrollbar 
 {
       display: none;
+}
+
+:root{
+      --bg-color: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
+      --navbar-color: linear-gradient(rgb(0,129,170),black);
+      --text-color: white;
+}
+.dark_mode{
+      --bg-color: white;
+      --navbar-color: blue;
+      --text-color: black;
 }
 .headpage{
       height:100vh;
@@ -29,31 +40,13 @@ body::-webkit-scrollbar
 .headpage > h1{
       font-size: 3.5rem;
 }
-.toggle_theme{
+#toggle_theme{
       position: fixed;
       z-index: 1;
       bottom: 20px;
-      left: 12px;
-}
-.toggle_theme .box{
-      width: 50px;
-      height: 25px;
-      background-color: white;
-      border-radius: 50px;
-      margin: 10px auto;
-}
-.toggle_theme .circle{
-      width: 20px;
-      height: 20px;
-      border-radius: 50px;
-      background-color: rgb(0, 0, 0);
-      border: 1px solid black;
-      position: absolute;
-      top: .7rem;
-      left: 1.2rem;
-}
-.toggle_theme #text{
-      margin-top: 20px;
+      left: 2.7rem;
+      width: 30px;
+      height: 30px;
 }
 .side_navbar{
       display: flex;
@@ -64,13 +57,13 @@ body::-webkit-scrollbar
       position: fixed;
       top: 0;
       left: 0;
-      background: linear-gradient(rgb(0,129,170),black);
+      background:var(--navbar-color);
       height: 100vh;
       width: 8rem;
 }
 .side_navbar a{
       text-decoration: none;
-      color: white;
+      color: var(--text-color);
       margin: 30px;
 }
 #menu{
@@ -83,7 +76,7 @@ body::-webkit-scrollbar
       height: 100vh;
 }
 .sea > .page >  img{
-      border: 5px solid rgb(255, 255, 255);
+      border: 5px solid var(--text-color);
       object-fit: cover;
 }
 .page > p{

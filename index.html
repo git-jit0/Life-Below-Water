@@ -27,11 +27,8 @@
     <a href="#page-4">Target 4</a>
     <a href="#page-5">Target 5</a>
 
-    <div class="toggle_theme" id="toggle_theme_id">
-      <div class="box"></div>
-      <div class="circle"></div>
-      <span id="text">toggle theme</span>
-    </div>
+    
+      <img src="sun.png" id="toggle_theme" alt="light_mode_png">
 
   </div>
 
@@ -78,6 +75,20 @@
 
   </div>
   
-  <script src="/script.js"></script>
+  <script>
+    var icon = document.getElementById("toggle_theme");
+    icon.onclick=  function()
+    {
+      document.body.classList.toggle("dark_mode");
+      if(document.body.classList.contains("dark_mode"))
+      {
+        icon.src="moon.png";
+      }
+      else
+      {
+        icon.src="sun.png";
+      }
+    }
+  </script>
 </body>
 </html>
