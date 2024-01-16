@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
       const sideNav = document.querySelector('.side_navbar');
-      const toggleButton = document.querySelector('.toggle_button'); 
+      const toggleButton = document.querySelector('.toggle'); 
       // Replace with your toggle button element
   
       // Function to toggle the sidebar

@@ -75,6 +75,9 @@ body::-webkit-scrollbar
       color: white;
       margin: 30px;
 }
+#menu{
+      margin-top: 20px;
+}
 .sea{
       margin-left: 7rem;
 }
@@ -99,26 +102,65 @@ body::-webkit-scrollbar
 #page-1 > img{
       position: absolute;
       right: 157px;
-      top:calc(100vh+ 160px);
+      top:120vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-1 > .content{
       position: absolute;
-      top:calc(100vh+165px);
+      top:120vh;
       left: 270px;
 }
 
 
 #page-2 > img{
       position: absolute;
-      right: calc(157px);
-      top: calc(100vh+160px);
+      right: 157px;
+      top:220vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-2 > .content{
       position: absolute;
-      top:calc(100vh+165px);
+      top:220vh;
+      left: 270px;
+}
+
+#page-3 > img{
+      position: absolute;
+      right: 157px;
+      top:320vh;
+      aspect-ratio: 9/16;
+      height: 30rem;   
+}
+#page-3 > .content{
+      position: absolute;
+      top:320vh;
+      left: 270px;
+}
+
+#page-4 > img{
+      position: absolute;
+      right: 157px;
+      top:420vh;
+      aspect-ratio: 9/16;
+      height: 30rem;   
+}
+#page-4 > .content{
+      position: absolute;
+      top:420vh;
+      left: 270px;
+}
+
+#page-5 > img{
+      position: absolute;
+      right: 157px;
+      top:520vh;
+      aspect-ratio: 9/16;
+      height: 30rem;   
+}
+#page-5 > .content{
+      position: absolute;
+      top:520vh;
       left: 270px;
 }
