@@ -36,7 +36,7 @@
       <img src="https://images.pexels.com/photos/1298684/pexels-photo-1298684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#" width="400" height="400">
       <div class="content">
           <h1>Reduce Marine Pollution</h1>
-            <p>By the year 2025, our objective is to prevent and substantially diminish all forms of marine pollution, with a special emphasis on pollutants originating from land-based activities. This encompasses addressing challenges such as marine debris and nutrient pollution. Our concerted efforts aim to create a cleaner and healthier marine environment, fostering sustainable practices to safeguard our oceans for the future.</p>
+            <p class="fade-in">By the year 2025, our objective is to prevent and substantially diminish all forms of marine pollution, with a special emphasis on pollutants originating from land-based activities. This encompasses addressing challenges such as marine debris and nutrient pollution. Our concerted efforts aim to create a cleaner and healthier marine environment, fostering sustainable practices to safeguard our oceans for the future.</p>
       </div>
     </div>
 
@@ -44,7 +44,7 @@
       <img src="https://images.pexels.com/photos/1482193/pexels-photo-1482193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#">
         <div class="content">
           <h1>Protect and Restore Ecosystem</h1>
-          <p>By the year 2020, our goal is to implement sustainable management practices that safeguard and preserve marine and coastal ecosystems. This involves preventing substantial adverse impacts and enhancing resilience to ensure their long-term health. Furthermore, proactive measures will be taken to restore these ecosystems, fostering environments that are not only robust but also conducive to the productivity of our oceans.</p>
+          <p class="fade-in">By the year 2020, our goal is to implement sustainable management practices that safeguard and preserve marine and coastal ecosystems. This involves preventing substantial adverse impacts and enhancing resilience to ensure their long-term health. Furthermore, proactive measures will be taken to restore these ecosystems, fostering environments that are not only robust but also conducive to the productivity of our oceans.</p>
         </div>    
       </div>
 
@@ -52,7 +52,7 @@
         <img src="https://images.pexels.com/photos/912108/pexels-photo-912108.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#" width="400" height="400">
           <div class="content">
             <h1>Sustainable Fishing </h1>
-            <p>By 2020, the aim is to establish effective regulations for harvesting, putting an end to overfishing, illegal, unreported, and unregulated fishing, as well as destructive fishing practices. This entails the implementation of science-based management plans. The overarching objective is to expedite the restoration of fish stocks, striving to reach levels that can yield the maximum sustainable output as determined by their biological characteristics, ensuring a balanced and sustainable approach to fisheries management.</p>
+            <p class="fade-in">By 2020, the aim is to establish effective regulations for harvesting, putting an end to overfishing, illegal, unreported, and unregulated fishing, as well as destructive fishing practices. This entails the implementation of science-based management plans. The overarching objective is to expedite the restoration of fish stocks, striving to reach levels that can yield the maximum sustainable output as determined by their biological characteristics, ensuring a balanced and sustainable approach to fisheries management.</p>
           </div>
       </div>
 
@@ -60,14 +60,14 @@
       <img src="https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#" width="400" height="400">
         <div class="content">
           <h1>Advancing Ocean Health: Scientific Knowledge, Research, and Technology</h1>
-          <p>Augmenting scientific knowledge, research, and technology in alignment with the Intergovernmental Oceanographic Commission Criteria and guidelines on the Transfer of Marine Technology. This is aimed at fostering improvements in ocean health and bolstering the role of marine biodiversity in supporting the development of developing countries, with a specific focus on small island developing States and least developed countries.</p>
+          <p class="fade-in">Augmenting scientific knowledge, research, and technology in alignment with the Intergovernmental Oceanographic Commission Criteria and guidelines on the Transfer of Marine Technology. This is aimed at fostering improvements in ocean health and bolstering the role of marine biodiversity in supporting the development of developing countries, with a specific focus on small island developing States and least developed countries.</p>
         </div>
     </div>
     <div class="page" id="page-5">
       <img src="https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#" width="400" height="400">
         <div class="content">
           <h1>Implement and Enforce International Sea Law</h1>
-          <p>Promote the conservation and sustainable utilization of oceans and their resources by adhering to international law outlined in the United Nations Convention on the Law of the Sea. This convention serves as the legal framework for the responsible management of oceans and their resources, as emphasized in paragraph 158 of the "future we want.</p>
+          <p class="fade-in"> Promote the conservation and sustainable utilization of oceans and their resources by adhering to international law outlined in the United Nations Convention on the Law of the Sea. This convention serves as the legal framework for the responsible management of oceans and their resources, as emphasized in paragraph 158 of the "future we want.</p>
         </div>
     </div>
 
@@ -84,6 +84,26 @@
           sidebar.style.left = "-8rem";
       }
     }
+
+    const appearOptions = {  threshold : 0.4 }
+    const faders =document.querySelectorAll(".fade-in")
+    const appearOnScroll= new IntersectionObserver(function(entries,appearOnScroll)
+    {
+        entries.forEach(entry=> 
+        {
+          if(!entry.isIntersecting)
+          {
+            return;
+          } 
+          else 
+          {
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+          }
+        })
+    },appearOptions);
+
+    faders.forEach(fader => { appearOnScroll.observe(fader); })
   </script>
 </body>
 </html>

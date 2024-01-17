@@ -15,8 +15,6 @@ body{
       background-blend-mode: screen;
       
 }
-
-
 :root{
       --bg-color: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
       --navbar-color: linear-gradient(rgb(0,129,170),black);
@@ -41,12 +39,6 @@ body{
       font-size: 3.5rem;
 }
 
-
-#toggle_theme{
-      margin-top: 5rem;
-      width: 30px;
-      height: 30px;
-}
 .side_navbar{
       display: flex;
       justify-content: start;
@@ -64,7 +56,7 @@ body{
 .side_navbar a{
       text-decoration: none;
       color: var(--text-color);
-      margin-top: 70px;
+      margin-top: 100px;
 }
 .side_navbar a:hover{
       transform: scale(1.1);
@@ -85,40 +77,43 @@ body{
 .sea > .page >  img{
       border: 5px solid var(--text-color);
       object-fit: cover;
-}
-.page > p{
-      line-height: 1.5em;
+      border-radius: 20px;
 }
 .content{
+      line-height: 1.5em;
       font-size: 1.4rem;
       max-width: 40ch;
 }
-
+h1{
+      margin-bottom: 30px;
+      line-height: 1.3em;
+}
 
 #page-1 > img{
       position: absolute;
       right: 157px;
-      top:220vh;
+      top:225vh;
       aspect-ratio: 9/16;
       height: 30rem;   
 }
 #page-1 > .content{
       position: absolute;
-      top:220vh;
-      left: 270px;
+      top:230vh;
+      left: 220px;
+      padding: 20px;
 }
 
 #page-2 > img{
       position: absolute;
-      right: 157px;
+      left: 200px;
       top:320vh;
-      aspect-ratio: 9/16;
+      aspect-ratio: 1/1;
       height: 30rem;   
 }
 #page-2 > .content{
       position: absolute;
-      top:320vh;
-      left: 270px;
+      top:325vh;
+      right: 157px;
 }
 
 #page-3 > img{
@@ -136,15 +131,15 @@ body{
 
 #page-4 > img{
       position: absolute;
-      right: 157px;
-      top:520vh;
-      aspect-ratio: 9/16;
-      height: 30rem;   
+      left: 150px;
+      top:525vh;
+      aspect-ratio: 9/16 ;
+      width: 40rem;   
 }
 #page-4 > .content{
       position: absolute;
       top:520vh;
-      left: 270px;
+      right: 100px;
 }
 
 #page-5 > img{
@@ -158,4 +153,13 @@ body{
       position: absolute;
       top:620vh;
       left: 270px;
+}
+
+
+.fade-in{
+      opacity: .1;
+      transition: opacity 1s, transform 1s;
+    }
+.fade-in.appear{
+      opacity: 1;
 }
