@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 *{
       margin: 0;
       border: 0;
@@ -7,11 +7,13 @@
 }
 html{
       scroll-behavior: smooth;
+      font-family: 'Montserrat', sans-serif;
 }
 body{
       color: whitesmoke;
       background: var(--bg-color);
       background-blend-mode: screen;
+      
 }
 
 
@@ -31,7 +33,7 @@ body{
       color: var(--text-color);
 }
 .headpage > p{
-      max-width: 70ch;
+      max-width: 60ch;
       text-align: center;
       line-height: 1.5em;
 }
@@ -85,12 +87,10 @@ body{
       object-fit: cover;
 }
 .page > p{
-      padding-top: 20px;
+      line-height: 1.5em;
 }
 .content{
       font-size: 1.4rem;
-      font-family: 'Playfair Display', serif;
-      font-family: 'Quicksand', sans-serif;
       max-width: 40ch;
 }
 
