@@ -8,6 +8,7 @@
 html{
       scroll-behavior: smooth;
       font-family: 'Montserrat', sans-serif;
+      min-width: fit-content;
 }
 body{
       color: whitesmoke;
@@ -83,6 +84,7 @@ body{
       line-height: 1.5em;
       font-size: 1.4rem;
       max-width: 40ch;
+      overflow: hidden;
 }
 h1{
       margin-bottom: 30px;
@@ -154,7 +156,11 @@ h1{
       top:620vh;
       left: 270px;
 }
-
+#copy-right{
+      position: relative;
+      bottom: 10px;
+      margin-left: 80%;
+}
 
 .fade-in{
       opacity: .1;
