@@ -13,16 +13,14 @@ body{
       background: var(--bg-color);
       background-blend-mode: screen;
 }
+
+
 :root{
       --bg-color: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
       --navbar-color: linear-gradient(rgb(0,129,170),black);
       --text-color: white;
 }
-.dark_mode{
-      --bg-color: white;
-      --navbar-color: blue;
-      --text-color: black;
-}
+
 .headpage{
       height:100vh;
       display: flex;
@@ -30,6 +28,7 @@ body{
       align-items: center;
       flex-direction: column;
       font-size: x-large;
+      color: var(--text-color);
 }
 .headpage > p{
       max-width: 70ch;
@@ -39,11 +38,10 @@ body{
 .headpage > h1{
       font-size: 3.5rem;
 }
+
+
 #toggle_theme{
-      position: absolute;
-      z-index: 1;
-      bottom: 20px;
-      left: 2.7rem;
+      margin-top: 5rem;
       width: 30px;
       height: 30px;
 }
@@ -58,7 +56,7 @@ body{
       left: -8rem;
       background:var(--navbar-color);
       height: 100vh;
-      width: 8rem;
+      width: 7rem;
       transition: left 0.3s ease;
 }
 .side_navbar a{
@@ -67,20 +65,20 @@ body{
       margin-top: 70px;
 }
 .side_navbar a:hover{
-      transform: scale(1.2);
+      transform: scale(1.1);
 }
 #menu{
       position: fixed;
       z-index: 1;
       top: 20px;
-      left: 3rem;
+      left: 2.7rem;
       cursor: pointer;
 }
-.sea{
-      margin-left: 7rem;
-}
+
+
 .sea >.page{
       height: 100vh;
+      color: var(--text-color);
 }
 .sea > .page >  img{
       border: 5px solid var(--text-color);
@@ -109,7 +107,6 @@ body{
       top:220vh;
       left: 270px;
 }
-
 
 #page-2 > img{
       position: absolute;
