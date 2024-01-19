@@ -1,0 +1,79 @@
+@media screen and (max-width: 800px) {
+
+      *{    /* reset*/
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+      }
+      :root{/* colors */
+            --bg-color: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
+            --navbar-color: linear-gradient(rgb(0,129,170),black);
+            --text-color: white;
+      }
+      html{
+            
+            scroll-behavior: smooth;
+            color: var(--text-color);
+            background: var(--bg-color);
+            background-blend-mode: screen;
+            overflow-x: hidden;
+            width: 100vw;
+
+      }
+      #menu{
+            display: none;
+      }
+      .side_navbar{
+            display: none;
+      }
+      
+      .headpage{
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            line-height: 1.5rem;
+            padding: 20px;
+            font-size: large;
+      }
+      .headpage h1{
+            text-align: center;
+            line-height: 2.5rem;
+      }
+
+      .page{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 8rem 0px;
+      }
+      .page  img{
+            width: 90%;
+            aspect-ratio: 16/9;
+            object-fit:cover;
+            margin: 10px 0px;
+            border: 3px solid var(--text-color);
+      }
+      .page .content{
+            padding: 20px;
+            line-height: 1.5rem;
+            font-size: large;
+      }
+      .page .content h1{
+            text-align: center;
+            line-height: 2.5rem;
+            margin-bottom: 20px;
+      }
+      .fade-in{
+            opacity: .1;
+            transition: opacity 1s, transform 1s;
+          }
+      .fade-in.appear{
+            opacity: 1;
+      }
+}

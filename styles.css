@@ -1,165 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-*{
-      margin: 0;
-      border: 0;
-      padding: 0;
+*{    /* reset*/
+      margin: 0px;
+      border: 0px;
+      padding: 0px;
       box-sizing: border-box;
 }
-html{
-      scroll-behavior: smooth;
-      font-family: 'Montserrat', sans-serif;
-      min-width: fit-content;
-}
-body{
-      color: whitesmoke;
-      background: var(--bg-color);
-      background-blend-mode: screen;
-      
-}
-:root{
+:root{/* colors */
       --bg-color: radial-gradient(165.51% 141.42% at 100% 0%, rgba(0, 18, 65, 0.78) 0%, #000 0%, #00071A 0%, #000D2D 0%, #000E31 0%, #000920 4.7%, #000F34 33.08%, #000B28 50.35%, #00081D 66.48%, #000510 80.85%, #000 98.77%);
       --navbar-color: linear-gradient(rgb(0,129,170),black);
       --text-color: white;
 }
-
-.headpage{
-      height:100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: x-large;
+html{
+      scroll-behavior: smooth;
       color: var(--text-color);
-}
-.headpage > p{
-      max-width: 60ch;
-      text-align: center;
-      line-height: 1.5em;
-}
-.headpage > h1{
-      font-size: 3.5rem;
-}
+      background: var(--bg-color);
+      background-blend-mode: screen;
+      overflow-x: hidden;
+      width: 100vw;
 
+}
 .side_navbar{
-      display: flex;
-      justify-content: start;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
       position: fixed;
       top: 0;
       left: -8rem;
+      z-index: 1;
       background:var(--navbar-color);
       height: 100vh;
-      width: 7rem;
+      width: 8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6rem;
       transition: left 0.3s ease;
 }
 .side_navbar a{
       text-decoration: none;
       color: var(--text-color);
-      margin-top: 100px;
 }
 .side_navbar a:hover{
       transform: scale(1.1);
 }
 #menu{
       position: fixed;
-      z-index: 1;
       top: 20px;
-      left: 2.7rem;
+      left: 3.33rem;
       cursor: pointer;
 }
 
-
-.sea >.page{
+.headpage{
       height: 100vh;
-      color: var(--text-color);
-}
-.sea > .page >  img{
-      border: 5px solid var(--text-color);
-      object-fit: cover;
-      border-radius: 20px;
-}
-.content{
-      line-height: 1.5em;
-      font-size: 1.4rem;
-      max-width: 40ch;
-      overflow: hidden;
-}
-h1{
-      margin-bottom: 30px;
-      line-height: 1.3em;
-}
-
-#page-1 > img{
-      position: absolute;
-      right: 157px;
-      top:225vh;
-      aspect-ratio: 9/16;
-      height: 30rem;   
-}
-#page-1 > .content{
-      position: absolute;
-      top:230vh;
-      left: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      line-height: 1.5rem;
       padding: 20px;
+      font-size: larger;
+}
+.headpage h1{
+      line-height: 2.5rem;
+}
+.headpage p{
+      width: 75ch;
 }
 
-#page-2 > img{
-      position: absolute;
-      left: 200px;
-      top:320vh;
+.page{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      gap: 5rem;
+}
+.page .content{
+      font-size: larger;
+}
+.page .content h1{
+      text-align: center;
+      line-height: 2.5rem;
+      margin-bottom: 20px;
+}
+.page .content p{
+      width: 55ch;
+      line-height: 1.5rem;
+}
+.page  img{
+      width: 500px;
+      aspect-ratio: 4/3;
+      object-fit:cover;
+      border: 3px solid var(--text-color);
+}
+#page-1 , #page-3 ,#page-5{
+      flex-direction: row-reverse;
+}
+#page-1 img{
+      aspect-ratio: 4/3;
+}
+#page-2 img{
+      aspect-ratio: 3.5/4;
+}
+#page-3 img{
+      aspect-ratio:1/1;
+}
+#page-4 img{
+      width: 340px;
+      aspect-ratio: 9/14 ;
+}
+#page-5 img{
       aspect-ratio: 1/1;
-      height: 30rem;   
-}
-#page-2 > .content{
-      position: absolute;
-      top:325vh;
-      right: 157px;
-}
-
-#page-3 > img{
-      position: absolute;
-      right: 157px;
-      top:420vh;
-      aspect-ratio: 9/16;
-      height: 30rem;   
-}
-#page-3 > .content{
-      position: absolute;
-      top:420vh;
-      left: 270px;
-}
-
-#page-4 > img{
-      position: absolute;
-      left: 150px;
-      top:525vh;
-      aspect-ratio: 9/16 ;
-      width: 40rem;   
-}
-#page-4 > .content{
-      position: absolute;
-      top:520vh;
-      right: 100px;
-}
-
-#page-5 > img{
-      position: absolute;
-      right: 157px;
-      top:620vh;
-      aspect-ratio: 9/16;
-      height: 30rem;   
-}
-#page-5 > .content{
-      position: absolute;
-      top:620vh;
-      left: 270px;
-}
-#copy-right{
-      position: relative;
-      bottom: 10px;
-      margin-left: 80%;
 }
 
 .fade-in{
